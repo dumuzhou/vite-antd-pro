@@ -150,6 +150,13 @@ export default () => {
   const actionRef = useRef<ActionType>();
   return (
     <ProTable<GithubIssueItem>
+      style={
+        {
+          //height: "300px",
+          //overflow: "hidden",
+        }
+      }
+      //scroll={{ x: 4000, y: 2000 }}
       columns={columns}
       actionRef={actionRef}
       cardBordered
@@ -197,9 +204,10 @@ export default () => {
         },
       }}
       pagination={{
-        pageSize: 5,
+        pageSize: 20,
         onChange: (page) => console.log(page),
       }}
+      scroll={{ y: "calc(100vh - 488px)" }}
       dateFormatter="string"
       headerTitle="高级表格"
       toolBarRender={() => [
