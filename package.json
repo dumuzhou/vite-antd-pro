@@ -1,10 +1,9 @@
 {
-  "name": "antd-demo",
-  "private": true,
+  "name": "vite-antd-pro",
   "version": "0.0.0",
   "type": "module",
   "scripts": {
-    "dev": "vite",
+    "dev": "vite --port 9008 --host 0.0.0.0",
     "build": "tsc -b && vite build",
     "lint": "eslint .",
     "preview": "vite preview"
